@@ -1,6 +1,6 @@
 # README
 
-This is Youtube Randam Player.
+This is Youtube Random Player.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
