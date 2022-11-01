@@ -3,6 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+#gem 'google-api-client', '~> 0.11'
+
+gem 'rack-cors'
+
+gem 'google-apis-youtube_v3'
+
+gem 'dotenv-rails'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
@@ -38,6 +46,8 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  #gem 'ruby-debug-ide'
+  #gem 'debase'
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
