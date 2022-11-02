@@ -1,4 +1,5 @@
 require 'google/apis/youtube_v3'
+MAX_RESULTS = 5;
 
 module YoutubeApiHelper
   def initializeYoutubeApi
@@ -21,7 +22,7 @@ module YoutubeApiHelper
     opt = {
       q:            query,
       #order:        'date', # 日付順．
-      max_results:  30,      # 30件だけ取る．
+      max_results:  MAX_RESULTS,      # 30件だけ取る．
       type:         'video' # 検索対象を動画に限定．
     }
   
