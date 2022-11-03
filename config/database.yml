@@ -85,7 +85,7 @@ test:
 #
 production:
   <<: *default
-  database: randomyoutubeplayer
-  username: randomyoutubeplayer
-  password: <%= ENV["APP_DATABASE_PASSWORD"] %>
+  # database: randomyoutubeplayer
+  # username: randomyoutubeplayer
+  # password: <%= ENV["APP_DATABASE_PASSWORD"] %>
   url: <%= ENV['DATABASE_URL'] %>
