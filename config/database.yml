@@ -85,8 +85,7 @@ test:
 #
 production:
   <<: *default
-  database: randomyoutubeplayer
-  username: randomyoutubeplayer
-  # password: <%= ENV["APP_DATABASE_PASSWORD"] %>
+  database: app_production
+  username: app
+  password: <%= ENV["APP_DATABASE_PASSWORD"] %>
   url: <%= ENV['DATABASE_URL'] %>
-  port: 5432
