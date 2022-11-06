@@ -6,8 +6,12 @@ class YoutubeApiController < ApplicationController
     initializeYoutubeApi
 
     random_string = [*('0'..'9'),*('a'..'z')].sample(RANDOM_STRING_LENGTH).join
-    video_snippet = video_list(random_string, 'snippet').items
-    render json: {"videoId": video_snippet.sample.id.video_id}
+    random_videos = video_list(random_string, 'snippet').items
+
+    # puts "fffffffffff" << random_videos
+
+    random_video = random_videos.sample
+    render json: {"videoId": random_video.id.video_id, "title": random_video.snippet.title}
 
   end
 
