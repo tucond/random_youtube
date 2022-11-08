@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://random-youtube-player-d4s0.onrender.com/'
+    origins 'https://random-youtube-frontend2.vercel.app'
 
     resource "*",
       headers: :any,
