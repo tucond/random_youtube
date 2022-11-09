@@ -1,5 +1,7 @@
 class YoutubeApiController < ApplicationController
-  RANDOM_STRING_LENGTH = 3;
+  RANDOM_STRING_LENGTH = 5;
+  RANDOM_SEARCH_STRING_LENGTH = 1;
+
   
   def new
     service = YoutubeApi.new
@@ -14,8 +16,9 @@ class YoutubeApiController < ApplicationController
   def show
     service = YoutubeApi.new
 
-    random_string = [*('0'..'9'),*('a'..'z')].sample(RANDOM_STRING_LENGTH).join
+    random_string = [*('0'..'9'),*('a'..'z')].sample(RANDOM_SEARCH_STRING_LENGTH).join
     search_string = params[:id].to_s + " " + random_string
+
 
     random_videos = service.video_list(search_string, 'snippet').items
     random_video = random_videos.sample
