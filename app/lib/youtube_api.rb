@@ -1,6 +1,6 @@
 class YoutubeApi
   require 'google/apis/youtube_v3'
-  MAX_RESULTS = 30;
+  MAX_RESULTS = 2;
 
   def initialize
     @service = Google::Apis::YoutubeV3::YouTubeService.new
