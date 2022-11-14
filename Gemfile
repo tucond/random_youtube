@@ -6,6 +6,8 @@ ruby "3.1.2"
 #gem 'google-api-client', '~> 0.11'
 gem 'devise'
 
+gem 'devise_token_auth'
+
 gem 'rack-cors'
 
 gem 'google-apis-youtube_v3'

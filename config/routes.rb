@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  # devise_for :users
+  mount_devise_token_auth_for 'User', at: 'auth'
+  # , controllers:{
+  #   registrations: "registrations"
+  # }
+
   # get 'youtube_api/new'
   # get 'youtube_api/:id', to: 'youtube_api#show'
 
